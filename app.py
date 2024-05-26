@@ -47,6 +47,11 @@ class Lottery:
 
         return valid_combinations
 
+#  默认页面
+@app.route("/",methods=["GET"])
+def index():
+    return render_template('index.html')
+
 
 @app.route('/lottery', methods=['GET', 'POST'])
 def index():
